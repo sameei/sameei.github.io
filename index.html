@@ -14,52 +14,99 @@
 			https://www.w3schools.com/css/css_text.asp
 			https://websitesetup.org/web-safe-fonts-html-css/
 			*/
-			body {
+			
+			* {
+				margin : 0pt;
+				padding : 0pt;
 				color : #2F4F4F;
 				font-family: "Georgia", "Times New Roman";
 				font-size: 12pt;
+				font-style: normal;
+				font-weight: normal;
+			}
+			body {
+				padding : 50pt 80pt;
+			}
+			#content {
+				max-width: 500pt	;
+			}
+			.simple-text {
+				font-family: "Courier New", "Lucida Console";
+				font-size: 12pt;
+				margin-top : 4pt;
+			}
+			h2, .bigbanner {
+				display: block;
+				font-size: 24pt;
+				margin-top: 5pt;
 			}
 			.linkbox {
 				font-family: "Courier New", "Lucida Console";
 				font-size: 12pt;
-				margin : 10pt 0pt;
+				margin-top: 30pt;
 			}
-			.linkbox > h4 {
+			.linkbox h4 {
+				margin-bottom: 7pt;
 				font-size : 14pt;
-				margin : 0pt;
 				font-style : normal;
 			}
-			.linkbox > a:link {
+			.linkbox p {
+				margin-bottom: 7pt;
+			}
+			.linkbox a {
+				margin-top: 3pt;
+			}
+			.linkbox a:link {
 				color : #6B8E23;
 				text-decoration : none;
 			}
-			.linkbox > a:visited{
+			.linkbox a:visited{
 				color : #6B8E23;
 				text-decoration : none;
 			}
-			.linkbox > a:hover {
+			.linkbox a:hover {
 				color : #2F4F4F;
 				text-decoration : underline;
 			}
-			.linkbox > a:active {
+			.linkbox a:active {
 				color : #6B8E23;
 				text-decoration : none;
+			}
+			
+			span.reverse {
+			  unicode-bidi: bidi-override;
+			  direction: rtl;
+			}
+			#secret:before {
+			    content: "reza.samee";
+			}
+			#secret:after {
+			    content: "@gmail.com";
 			}
 		</style>
 	</head>
 	<body>
-		<h4>Hello !</h4>	
-		<p>I'm Reza Same'ei</p>
-		<div id="book" class="linkbox">
-			<h4> How I'm Thiking / What I'm learning </h4>
-			<a href="book/SoftwareDesign/index.html">Software Design</a>
-			<span> | </span>
-		</div>
-		<div id="outlink-content" class="linkbox">
-			<h4> Where to find me </h4>
-			<a href="https://github.com/sameei">Github</a>
-			<span> | </span>			
-			<a href="https://goodreads.com/sameei">Goodreads</a>
+		<div id="content">
+			<div id="about-me">
+				<p class="simple-text">Hello,</p>
+				<p class="simple-text">I'm ...</p>
+				<h4 class="bigbanner">REZA SAME'EI</h4>
+				<p class="simple-text">A Software Developer :)</p>
+			</div>
+			<div class="linkbox">
+				<h4> What I think about & How </h4>
+				<a href="book/SoftwareDesign/index.html">Software Design</a>
+				<span> | </span>
+				<a href="book/SelfBlah/index.html">Self blah blah!</a>
+			</div>
+			<div class="linkbox">
+				<h4> Contacting me </h4>
+				<p>If you'd like to contact me, send me an email to 
+					<span id="secret"></span> ; also you can find me at 
+					<a href="https://github.com/sameei">Github</a> and 
+					<a href="https://goodreads.com/sameei">Goodreads</a>.
+				</p>
+			</div>
 		</div>
 	</body>
 </html>

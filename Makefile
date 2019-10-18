@@ -1,16 +1,21 @@
 
 
 export GITBOOK=gitbook
+export BOOK_DEV=book-dev
+export BOOK=book
 
 .PHONY: publish
-publish: computer-publish
+publish: books-republish
 
-.PHONY: comuter-clean
-computer-clean:
-				rm -rf computer/*
-
-.PHONY: computer-pubish
-computer-publish: computer-clean
-				${GITBOOK} build .computer computer
+.PHONY: books-republish
+books-republish:
+				@ rm -rf ${BOOK}/*
+				@ for book in $$(ls ./${BOOK_DEV}); do \
+								src="${BOOK_DEV}/$$book"; \
+								trg="${BOOK}/$$book"; \
+								echo "\n$$src -> $$trg ..."; \
+								${GITBOOK} build "$$src" "$$trg"; \
+								echo "$$src -> $$trg [DONE]"; \
+				done;
 
 

@@ -9,3 +9,6 @@ you put all business logic about them inside services, your model
 is a anaemic-model. In fact in this case your value/object is week,
 meaning that it is so passive and doesn't represent any logic of the
 bussines.
+
+
+What to say !!!

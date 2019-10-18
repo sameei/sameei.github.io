@@ -7,9 +7,13 @@ export BOOK=book
 .PHONY: publish
 publish: books-republish
 
+.PHONY: serve
+serve:
+				python -m SimpleHTTPServer 4000
+
 .PHONY: books-republish
 books-republish:
-				@ rm -rf ${BOOK}/*
+				# @ rm -rf ${BOOK}/*
 				@ for book in $$(ls ./${BOOK_DEV}); do \
 								src="${BOOK_DEV}/$$book"; \
 								trg="${BOOK}/$$book"; \

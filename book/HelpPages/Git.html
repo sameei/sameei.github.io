@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Git · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="a/AnaemicModel.html" />
+    <link rel="next" href="IntelliJ.html" />
     
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -100,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="a/AnaemicModel.html">
+        <li class="chapter active" data-level="1.2" data-path="Git.html">
             
-                <a href="a/AnaemicModel.html">
+                <a href="Git.html">
             
                     
-                    Domain Modelin & Code / Anaemi Model - Anti Pattern!
+                    Git
             
                 </a>
             
@@ -113,12 +115,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="RuntimeCosts/UsefulLinks.html">
+        <li class="chapter " data-level="1.3" data-path="IntelliJ.html">
             
-                <a href="RuntimeCosts/UsefulLinks.html">
+                <a href="IntelliJ.html">
             
                     
-                    Runtime Costs / Useful Links
+                    IntelliJ
             
                 </a>
             
@@ -156,7 +158,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Git</a>
     </h1>
 </div>
 
@@ -171,9 +173,67 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-<p>I&apos;m going to write about many things related to computer systems and software engineering, specially what I&apos;m encountering during my work, or what I find interesting.</p>
+                                <h3 id="git-sub-module">Git Sub Module</h3>
+<pre><code class="lang-shell">$ git submodule [--quiet] add [-b &lt;branch&gt;] [-f|--force] [--name &lt;name&gt;] [--reference &lt;repository&gt;] [--] &lt;repository&gt; [&lt;path&gt;]
+$ git submodule add -b master -f --name TheName git@github.com:veryimportantproject/sample-data.git
+$ git submodule update --init --recursive
+</code></pre>
+<ul>
+<li>(more)[<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank">https://git-scm.com/book/en/v2/Git-Tools-Submodules</a>]</li>
+</ul>
+<h3 id="git-rebase">Git Rebase</h3>
+<h3 id="git-flow">Git Flow</h3>
+<h3 id="git-config">Git Config</h3>
+<pre><code class="lang-yaml">[alias]
+    co = checkout
+    st = status
+    ci = commit
+    br = branch
+    lg = log --graph --decorate --oneline
+    lg-detail = log --graph
+    review-mr = fetch origin merge-requests/$<span class="hljs-number">1</span>/head:mr-$<span class="hljs-number">1</span>
+    review-br = pull origin rv-$<span class="hljs-number">1</span>:$<span class="hljs-number">1</span>
 
+[filter <span class="hljs-string">&quot;lfs&quot;</span>]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = <span class="hljs-literal">true</span>
+
+[user]
+    name = A Name
+    email = an@email.?
+
+[url <span class="hljs-string">&quot;git@github.com:&quot;</span>]
+  insteadOf = https://github.com/
+
+[http]
+    proxy = http://localhost:<span class="hljs-number">9009</span>
+
+[https]
+    proxy = http://localhost:<span class="hljs-number">9009</span>
+</code></pre>
+<h3 id="keys-for-multiple-github-account">Keys for Multiple Github Account</h3>
+<p>generate keys :</p>
+<pre><code>$ ssh-keygen -t rsa
+</code></pre><p>in <code>~/.ssh/config</code> :</p>
+<pre><code>Host user-first
+  HostName github.com
+  User git
+  proxycommand socat - PROXY:localhost:%h:%p,proxyport=9009
+  IdentityFile ~/path/to/akey
+  IdentitiesOnly yes
+
+
+Host user-second
+  HostName github.com
+  User git
+  proxycommand socat - PROXY:localhost:%h:%p,proxyport=9009
+  IdentityFile ~/path/to/another/key
+  IdentitiesOnly yes
+</code></pre><p>then use :</p>
+<pre><code>$ git clone git@user-first:organization/project.git
+</code></pre>
                                 
                                 </section>
                             
@@ -200,8 +260,12 @@
 
             
                 
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="a/AnaemicModel.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Domain Modelin & Code / Anaemi Model - Anti Pattern!">
+                
+                <a href="IntelliJ.html" class="navigation navigation-next " aria-label="Next page: IntelliJ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -212,7 +276,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Domain Modelin & Code / Anaemi Model - Anti Pattern!","level":"1.2","depth":1,"path":"a/AnaemicModel.md","ref":"a/AnaemicModel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-10-17T17:16:07.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T09:22:22.353Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.2","depth":1,"next":{"title":"IntelliJ","level":"1.3","depth":1,"path":"IntelliJ.md","ref":"IntelliJ.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Git.md","mtime":"2019-10-22T11:25:55.288Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T09:22:20.618Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

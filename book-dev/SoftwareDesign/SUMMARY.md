@@ -1,4 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Software / Design / Anaemic Model](a/AnaemicModel.md)
+* [Domain Modelin & Code / Anaemi Model - Anti Pattern!](a/AnaemicModel.md)
+* [Runtime Costs / Useful Links](RuntimeCosts/UsefulLinks.md)
+* [Security](Security.md)

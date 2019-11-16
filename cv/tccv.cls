@@ -72,7 +72,7 @@
     \begin{center}
 	\vskip-\lastskip%
 	{\usekomafont{part} #1} \medskip\\
-	{\fontfamily{pzc}\selectfont\Huge Curriculum vitae}
+	{Software Developer}
 	\bigskip
     \end{center}]}
 

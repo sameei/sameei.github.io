@@ -182,6 +182,10 @@
 %\vspace{-10pt} % Set a negative value to push the body up, and the opposite
 
 
+%\section{}{About me}
+%	\resumeEntryStart
+%		\resumeEntryS{}{A Software Developer with about 8yrs experience, mostly on \textbf{Backend} side, with some experiences with tools from Big Data stack; By having an increasing interest on challenges of \textbf{Data Intensive} application, I'm looking forward to develop my career towards that.}
+%	\resumeEntryEnd
 
 %-------------------------------------------------- EDUCATION --------------------------------------------------
 
@@ -201,24 +205,28 @@
       {TrialBlaze}{March 2019 -- Present}
       {Backend Developer}{\textbf{Remotely}! Perth, Austrialia}
     \resumeItemListStart
-      \resumeItem {Design and implement components to process ODM files based on \textbf{user defined logics}}
+	  \resumeItem { Design and implement a \textbf{rule based} component to process ODM files based on \textbf{user defined logics}}
       \resumeItem{Define a simple \textbf{AST} to express \textit{user defined logics} and transform it to Drools's rules}
-      \resumeItem{Design for maximum flexibility to reduce the risk caused by not having adequate context of domain, while being effective to reduce the complexity of the overall design as a \textbf{member of architect board}}
+      \resumeItem{Design for maximum flexibility to reduce the risk caused by \textit{not having adequate context of domain}, while being effective to reduce the complexity of the overall design as a \textbf{member of architect board}}
       \resumeItem{Toolbox: Java, Drools, PostgreSQL, Docker, Google Could, Reactor, Cadence, Go}
     \resumeItemListEnd
   \resumeEntryEnd
 
+% \vspace{-13pt} 
+
   \resumeEntryStart
     \resumeEntryTSDL
       {Bisphone}{March 2016 -- Dec 2018}
-      {Backend Developer / Junior Data Engineer}{Tehran, Iran}
+      {Backend Developer / Data Engineer}{Tehran, Iran}
     \resumeItemListStart
-      \resumeItem{Build and maintain more than 10 \textbf{data intensive} components, as RPC services using Scala, AkkaStream and Cassandra, or as Stream processing jobs usin Apache Flink and Kafka, to support needs of messaging backend}
+      \resumeItem{Build and maintain more than 10 \textbf{data intensive} components, as RPC services using \textbf{Scala}, \textbf{AkkaStream} and \textbf{Cassandra}, or as \textbf{Stream processing} jobs usin Apache \textbf{Flink} and \textbf{Kafka}, to support needs of messaging backend}
       \resumeItem{Being effective in the overall design of the system by taking part in analysing requested features and designing APIs and data models in both server side components and also Android and iOS clients as a \textbf{member of technical committe}}
       % \resumeItem{Lead a team of 2, and being CTO for about 5 months before stepping down.}
       \resumeItem{Toolbox: Scala, Akka, AkkaStream, Cassandra, Kafka, Apache Flink, MySQL, ELK}
     \resumeItemListEnd
   \resumeEntryEnd
+
+% \vspace{-13pt} 
 
   \resumeEntryStart
     \resumeEntryTSDL
@@ -250,9 +258,15 @@
 
 %-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
 \section{\faGears}{Software Skills}
- \resumeEntryStart
-  \resumeEntryS{Understanding of ... } {Distributed Systems, Concurrency, Stream Processing / Data Flow, Functional Programin, OOP, Actor Model, DDD, JVM Performance}
-  \resumeEntryS{Experience with ... } {Scala, Akka, AkkaStream, Java, SQL, Cassandra, Google Cloud, Apache Flink, Kafka, Drools, RabbitMQ, Docker, ZooKeeper}
- \resumeEntryEnd
+	\resumeEntryStart
+		\resumeEntryS{Understanding of ... } {Distributed Systems, Concurrency, Stream Processing / Data Flow, Functional Programin, OOP, Actor Model, DDD, JVM Performance}
+		\resumeEntryS{Experience with ... } {Scala, Akka, AkkaStream, Java, SQL, Cassandra, Google Cloud, Apache Flink, Kafka, Drools, RabbitMQ, Docker, ZooKeeper}
+	\resumeEntryEnd
+
+\section{\faGears}{Open Source Projects}
+	\resumeEntryStart
+		\resumeEntryS{\href{https://github.com/sameei/elasticreporter}{ElasticReporter}} {to push Apache Flink monitoring stats to Elastic directly; Support only Flink 1.2, 1.3, 1.5}
+		\resumeEntryS{\href{https://github.com/sameei/SARF}{SARF}} {Simple Abstraction for Remote Function, a toolkit providing the ground for RPC based communication}
+	\resumeEntryEnd
   
 \end{document}

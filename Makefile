@@ -5,7 +5,7 @@ export BOOK_DEV=book-dev
 export BOOK=book
 
 .PHONY: publish
-publish: books-republish
+publish: books-republish cv-aac-republish
 
 .PHONY: serve
 serve:
@@ -22,4 +22,5 @@ books-republish:
 								echo "$$src -> $$trg [DONE]"; \
 				done;
 
-
+cv-aac-republish:
+				pdflatex --output-directory cv/aac cv/aac/cv.tex

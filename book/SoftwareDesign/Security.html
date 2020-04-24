@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Security · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Git.html" />
     
+    <link rel="prev" href="RuntimeCosts/UsefulLinks.html" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -100,12 +100,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="Git.html">
+        <li class="chapter " data-level="1.2" data-path="a/AnaemicModel.html">
             
-                <a href="Git.html">
+                <a href="a/AnaemicModel.html">
             
                     
-                    Git
+                    Domain Modelin & Code / Anaemi Model - Anti Pattern!
             
                 </a>
             
@@ -113,12 +113,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="IntelliJ.html">
+        <li class="chapter " data-level="1.3" data-path="RuntimeCosts/UsefulLinks.html">
             
-                <a href="IntelliJ.html">
+                <a href="RuntimeCosts/UsefulLinks.html">
             
                     
-                    IntelliJ
+                    Runtime Costs / Useful Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="Security.html">
+            
+                <a href="Security.html">
+            
+                    
+                    Security
             
                 </a>
             
@@ -156,7 +169,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Security</a>
     </h1>
 </div>
 
@@ -171,7 +184,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
+                                <h3 id="security">Security</h3>
+<p>Cryptography vs. Cryptanalysis</p>
+<p>Security Services</p>
+<ul>
+<li>Condidentiality &#x2248; privacy, secrecy =&gt; no forbiden access.</li>
+<li>Data Integrity &#x2248; identify any alteration in data.</li>
+<li>Authentication<ul>
+<li>Message Authentication : check whether a message has been changed or not, after origination</li>
+<li>Entity Authentication : is assurance that the data has been recieved from a specific entity, say a particular web-site.</li>
+</ul>
+</li>
+<li>Non-repudiation : it assures that an enitty can&apos;t refuse the ownership of a previous commitment of an action.</li>
+</ul>
+<p>Cryptography Primitives</p>
+<ul>
+<li>Encryption</li>
+<li>Hash function</li>
+<li>Message Authentication Code (MAC)</li>
+<li>Digital Signature</li>
+</ul>
+<p><a href="!https:/www.tutorialspoint.com/cryptography/images/primitive_service.jpg"></a></p>
+<p><a href="https://www.tutorialspoint.com/cryptography/modern_cryptography.htm" target="_blank"></a></p>
+<p>For a given cryptosystem, a collection of all possible decryption keys is called a key space.</p>
+<p>Symetric vs. Asymetric</p>
+<p>Challenges in Symetric</p>
+<ul>
+<li>Key establishment</li>
+<li>Trust issue </li>
+</ul>
+<p>Challenge in Asymetric : Share Public Key</p>
+<p>=&gt; Public Key Infrastructure (PKI) 
+consisting a trusted third party. The third party securely manages and attests to the 
+authenticity of public keys. When the third party is requested to provide the public 
+key for any communicating person X, they are trusted to provide the correct public key.</p>
+<p><a href="https://www.tutorialspoint.com/cryptography/cryptosystems.htm" target="_blank">Kerckhoff principle</a></p>
+<p><a href="https://www.tutorialspoint.com/cryptography/public_key_encryption.htm" target="_blank">RSA</a></p>
 
                                 
                                 </section>
@@ -199,10 +247,10 @@
 
             
                 
-                
-                <a href="Git.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Git">
-                    <i class="fa fa-angle-right"></i>
+                <a href="RuntimeCosts/UsefulLinks.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Runtime Costs / Useful Links">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -211,7 +259,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Git","level":"1.2","depth":1,"path":"Git.md","ref":"Git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-04-24T08:13:34.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-24T08:56:05.425Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Security","level":"1.4","depth":1,"previous":{"title":"Runtime Costs / Useful Links","level":"1.3","depth":1,"path":"RuntimeCosts/UsefulLinks.md","ref":"RuntimeCosts/UsefulLinks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Security.md","mtime":"2020-04-24T08:13:34.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-24T08:56:07.895Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

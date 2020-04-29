@@ -118,13 +118,14 @@
     \end{tabular*}\vspace{-6pt}
 }
 
-\newcommand{\aboutMeEntryTSDL}[3]{
+\newcommand{\aboutMeEntryTSDL}[4]{
   \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}lrlr}
 	% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{0pt}}lrlr}
 	  \color{primary}{Full name} & \textbf{\color{accent}#1} &
 	  \color{primary}{Date of Birth} & \textbf{\color{accent}#2} \\
-	  \color{primary}{Languages} & \textit{\color{accent}#3} & & \\
+	  \color{primary}{Languages} & \textit{\color{accent}#3} & 
+	  \color{primary}{Mobile} & \textbf{\color{accent}#4} \\
     \end{tabular*}\vspace{-6pt}
 }
 
@@ -197,21 +198,6 @@
 %		\resumeEntryS{}{A Software Developer with about 8yrs experience, mostly on \textbf{Backend} side, with some experiences with tools from Big Data stack; By having an increasing interest on challenges of \textbf{Data Intensive} application, I'm looking forward to develop my career towards that.}
 %	\resumeEntryEnd
 
-%-------------------------------------------------- PERSONAL ----------------------------------------------------
-
-\section{}{About me}
-	%\resumeEntryStart
-	%	\resumeEntryS{Full name } {Reza Sameei Golvajh}
-	%	\resumeEntryS{Date of Birth} {Nov 1988}
-	%	\resumeEntryS{Mobile} {(+98) 912 666 2695}
-	%	\resumeEntryS{Languages} {English / B2 ; Persian / Native}
-	%\resumeEntryEnd
-	
-    \resumeEntryStart
-      \aboutMeEntryTSDL
-	  	{Reza Sameei Golvajh}{Nov 1988}{English(B2), Persian(Native)}
-    \resumeEntryEnd
-	\vspace{-4pt} % Set a negative value to push the body up, and the opposite
 
 %-------------------------------------------------- EDUCATION --------------------------------------------------
 
@@ -294,5 +280,13 @@
 		\resumeEntryS{\href{https://github.com/sameei/elasticreporter}{ElasticReporter}} {To push monitoring metrics from \textbf{Apache Flink} to ElasticSearch directly}
 		\resumeEntryS{\href{https://github.com/sameei/SARF}{SARF}} {Simple Abstraction for Remote Function, a toolkit providing the ground for \textbf{RPC} based communication}
 	\resumeEntryEnd
+	
+%-------------------------------------------------- PERSONAL ----------------------------------------------------
+
+\section{}{Personal Information}
+    \resumeEntryStart
+      \aboutMeEntryTSDL
+	  	{Reza Sameei Golvajh}{Nov 1988}{English(B2), Persian(Native)}{(+98) 912 666 2695}
+    \resumeEntryEnd
   
 \end{document}

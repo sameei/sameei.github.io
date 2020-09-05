@@ -28,6 +28,10 @@
 \def \phoneicon {\faPhone}
 \def \phonetext {+98-912-666-2695}
 
+\def \skypeicon {\faSkype}
+\def \skypelink {http://joints..../}
+\def \skypename {live:reza.samee}
+
 \def \emailicon {\faEnvelope}
 \def \emaillink {mailto:reza.samee@gmail.com}
 \def \emailtext {reza.samee@gmail.com}
@@ -36,7 +40,7 @@
 \def \githublink {https://github.com/sameei}
 \def \githubtext {/sameei}
 
-\def \stacksiteicon {\faGlobe}
+\def \stacksiteicon {\faStackOverflow}
 \def \stacksitelink {https://stackoverflow.com/users/998642/reza-sameei}
 \def \stacksitetext {stackoverflow}
 
@@ -62,6 +66,7 @@
 % Defines to make listing easier
 \def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
 \def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
+\def \skype {\skypeicon \hspace{3pt}\href{\skypelink}{\skypename}}
 \def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
 \def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
 \def \stackoverflow {\stacksiteicon \hspace{3pt}\href{\stacksitelink}{\stacksitetext}}
@@ -123,9 +128,10 @@
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}lrlr}
 	% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{0pt}}lrlr}
 	  \color{primary}{Full name} & \textbf{\color{accent}#1} &
-	  \color{primary}{Date of Birth} & \textbf{\color{accent}#2} \\
-	  \color{primary}{Languages} & \textit{\color{accent}#3} & 
-	  \color{primary}{Mobile} & \textbf{\color{accent}#4} \\
+	  \color{primary}{English Fluency} & \textit{\color{accent}#3} \\
+	  \color{primary}{Date of Birth} & \textbf{\color{accent}#2} &
+	  \color{primary}{Other Languages} & \textit{\color{accent}#4} \\
+	  % \color{primary}{Mobile} & \textbf{\color{accent}#4} \\
     \end{tabular*}\vspace{-6pt}
 }
 
@@ -189,7 +195,8 @@
 
 %---------------------------------------------------- HEADER ----------------------------------------------------
 
-\headertype{\linkedin}{\github}{\stackoverflow}{\phone}{\email}{\website}{} % Set the order of items here
+% \headertype{\linkedin}{\github}{\stackoverflow}{\phone}{\email}{\website}{}
+\headertype{\github}{\stackoverflow}{\linkedin}{\email}{\website}{\skype}{} % Set the order of items here
 %\vspace{-10pt} % Set a negative value to push the body up, and the opposite
 
 
@@ -220,7 +227,7 @@
 	  \resumeItem { Design and implement a \textbf{rule based} component to process ODM files based on \textbf{user defined logics}}
       \resumeItem{Define a simple \textbf{AST} to express \textit{user defined logics} and transform it to Drools's rules}
       \resumeItem{Design for maximum flexibility to reduce the risk caused by \textit{not having adequate context of domain}, while being effective to reduce the complexity of the overall design}
-      \resumeItem{Toolbox: Java, Drools, PostgreSQL, Docker, Google Could, Reactor, Cadence, Go}
+      \resumeItem{Toolbox: Java, Drools, JOOQ, PostgreSQL, Docker, Kubernetes, Google Could Platform, gRPC, Cadence}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -271,8 +278,8 @@
 %-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
 \section{\faGears}{Software Skills}
 	\resumeEntryStart
-		\resumeEntryS{Understanding of ... } {Distributed Systems, Concurrency, Stream Processing / Data Flow, Functional Programin, OOP, Actor Model, DDD, JVM Performance}
-		\resumeEntryS{Experience with ... } {Scala, Akka, AkkaStream, Java, SQL, Cassandra, Google Cloud, Apache Flink, Kafka, Drools, RabbitMQ, Docker, ZooKeeper}
+		\resumeEntryS{Understanding of ... } {Distributed Systems, Concurrency, Stream Processing / Data Flow, Functional Programing, OOP, Actor Model, DDD, JVM Performance}
+		\resumeEntryS{Experience with ... } {Scala, Akka, AkkaStream, Java, SQL, Cassandra, Google Cloud Platform, Apache Flink, Kafka, Drools, RabbitMQ, Docker, ZooKeeper}
 	\resumeEntryEnd
 
 \section{\faGears}{Open Source Projects}
@@ -286,7 +293,8 @@
 \section{}{Personal Information}
     \resumeEntryStart
       \aboutMeEntryTSDL
-	  	{Reza Sameei Golvajh}{Nov 1988}{English(B2), Persian(Native)}{(+98) 912 666 2695}
+	  	{Reza Sameei Golvajh}{Nov 1988}{\textbf{C1} (IELTS 7.0)}{German[A1], Persian[Native]}
+		%{(+98) 912 666 2695}
     \resumeEntryEnd
   
 \end{document}

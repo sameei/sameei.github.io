@@ -44,3 +44,9 @@
 - "While some customers may indicate that everything is critical at the start of a project : 'IwantaPony'; But RealWorldSuccess requires balancing what is desired with what is possible."
 - [Critical Success Factor](https://wiki.c2.com/?CriticalSuccessFactor) : "are those objectives that must absolutely be met, even after all tradeoffs, customer priorities, and qualified successes have been determined."
 - [Practical Software Requirements; a book](https://wiki.c2.com/?PracticalSoftwareRequirements)
+- [Teach Me To Smoke](https://wiki.c2.com/?TeachMeToSmoke)
+
+
+## Software Metrics
+- [C2: Software Metrics](https://wiki.c2.com/?SoftwareMetrics)
+- [Design Velocity](https://wiki.c2.com/?DesignVelocity)

@@ -66,3 +66,4 @@
 - [C2 : Law of Demeter](https://wiki.c2.com/?LawOfDemeter)
   - "Only talk to your immediate friends."
   - [Paper : Object-Oriented Programming : An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
+

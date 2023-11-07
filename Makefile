@@ -30,5 +30,7 @@ cv-en-pdfgen:
 cv-de-pdfgen:
 				pdflatex --output-directory cv/de cv/de/cv.tex
 
+# brew install basictex
+# brew install texlive
 .PHONY: cv-all-pdfgen
 cv-all-pdfgen: cv-en-pdfgen cv-de-pdfgen

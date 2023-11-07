@@ -7,6 +7,7 @@
 \documentclass[letterpaper,12pt]{article}[leftmargin=*]
 
 \usepackage[empty]{fullpage}
+% \usepackage[empty]{geometry}
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fontawesome}
@@ -34,8 +35,8 @@
 \def \skypename {live:reza.samee}
 
 \def \emailicon {\faEnvelope}
-\def \emaillink {mailto:reza.samee@gmail.com}
-\def \emailtext {reza.samee@gmail.com}
+\def \emaillink {mailto:reza.sameei@pm.me}
+\def \emailtext {reza.sameei@pm.me}
 
 \def \githubicon {\faGithub}
 \def \githublink {https://github.com/sameei}
@@ -111,6 +112,11 @@
 % Resume item
 \renewcommand{\labelitemii}{\bulletstyle}
 \newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeItemOld}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
   }
@@ -231,7 +237,15 @@
       {\href{https://zalando.de}{Zalando SE}}{Jan 2021-jetzt}
       {Software Backend Engineer}{Berlin, Deutschland}
     \resumeItemListStart
-      \resumeItem{Toolbox: Scala, Playframework, PostgreSQL, Docker, Kubernetes, AWS}
+      \resumeItem{Wartung und Bereitstellung von Verbesserungen auf der Online-Experimentierplattform mit Schwerpunkt auf der
+      Entwicklung und Optimierung der Zufalls- und Analysekomponenten. Dies beinhaltete die kontinuierliche Pflege der
+      Funktionalität der Plattform, das Design zuverlässiger und robuster Komponenten sowie die erfolgreiche Bereitstellung
+      neuer Funktionen und Verbesserungen, um die Effektivität der Plattform bei der Durchführung von Experimenten und der
+      Analyse von Ergebnissen sicherzustellen}
+      \resumeItem{Entwurf der neuen Analyseplattform unter Berücksichtigung der funktionalen und nichtfunktionalen Anforderungen
+      und Fokussierung auf die Überwindung der Einschränkungen des alten Systems, um die Effektivität der Plattform in den zukünftigen
+      Plänen des Unternehmens sicherzustellen}
+      \resumeItem{Toolbox: Scala, Java, Python, Docker, Kubernetes, Airflow, AWS, PostgreSQL, BigQuery, Apache Spark/Databricks}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -240,7 +254,7 @@
       {\href{https://trialblaze.com}{TrialBlaze}}{März 2019-Dez 2020}
       {Backend-Entwickler}{\textbf{Telearbeit}! Perth, Austrialia}
     \resumeItemListStart
-	  \resumeItem {Entwurf und Umsetzung der regelbasierten Komponente zur Verarbeitung von ODM-Dateien basierend auf benutzerdefinierten Logiken}
+      \resumeItem {Entwurf und Umsetzung der regelbasierten Komponente zur Verarbeitung von ODM-Dateien basierend auf benutzerdefinierten Logiken}
       \resumeItem{Definieren eines einfachen AST zum Ausdruck der benutzerdefinierten Logiken und zur seiner Umwandlung in die Regeln von Drools}
       \resumeItem{Entwurf für maximale Flexibilität zur Minderung des Risikos, das durch einen unzureichenden Domänenkontext verursacht wird, und gleichzeitig zur Reduzierung der Komplexität des Gesamtdesigns}
       \resumeItem{Toolbox: Java, Drools, JOOQ, PostgreSQL, Docker, Kubernetes, Google Could Platform, gRPC, Cadence}
@@ -299,8 +313,7 @@
 %% \section{\faLightbulb}{Software Skills}
 \section{\faPuzzlePiece}{Software-Kenntnisse}
 	\resumeEntryStart
-		\resumeEntryS{Vertraut mit} {Distributed Systems, Concurrency, Stream Processing / Data Flow, Functional Programing, OOP, Actor Model, DDD, JVM Performance}
-		\resumeEntryS{Erfahrung in} {Scala, Akka, AkkaStream, Java, SQL, Cassandra, Google Cloud Platform, Apache Flink, Kafka, Drools, RabbitMQ, Docker, ZooKeeper}
+  \resumeEntryS{Vertraut mit} {Distributed Systems, BigData, RDBMS and NoSQL Databases, Concurrency, Stream Processing / Data Flow, Functional Programing, OOP, Actor Model, DDD, JVM Performance}
 	\resumeEntryEnd
 
 % \section{\faGithub}{Open Source Projects}
